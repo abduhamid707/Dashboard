@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-header">
-        <h2>Hi {role.toString()}</h2>
+        <h2>Hi {role}</h2>
       </div>
       <nav className="sidebar-nav">
         <ul>
