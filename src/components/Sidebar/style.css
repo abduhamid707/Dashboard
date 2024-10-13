@@ -1,0 +1,90 @@
+:root {
+  /* Ranglar */
+  --sidebar-bg-color: #333;
+  --sidebar-text-color: white;
+  --button-bg-color: #007bff;
+  --button-bg-hover-color: #0056b3;
+  --button-text-color: white;
+
+  /* O'lchamlar */
+  --sidebar-width: 250px;
+  --content-padding: 20px;
+  --button-padding: 10px 20px;
+  --button-border-radius: 5px;
+
+  /* Animatsiya */
+  --transition-duration: 0.3s;
+  --ease-in-out: ease-in-out;
+}
+
+/* Sidebar uchun stil */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform var(--transition-duration) var(--ease-in-out);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar .sidebar-header h2 {
+  text-align: center;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: var(--content-padding);
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.089);
+  border-radius: 10px;
+}
+.sidebar ul li .active{
+    border-radius: 10px;
+  background: rgba(255, 255, 255, 0.152);
+    
+}
+.sidebar ul li:hover {
+  background: rgba(255, 255, 255, 0.152);
+}
+.sidebar ul li a {
+  color: var(--sidebar-text-color);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+/* Kontent uchun stil */
+.content {
+  margin-left: var(--sidebar-width);
+  padding: var(--content-padding);
+  transition: margin-left var(--transition-duration) var(--ease-in-out);
+}
+
+.content.collapsed {
+  margin-left: 0;
+}
+
+/* Tugmalar uchun stil */
+button {
+  padding: var(--button-padding);
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-bg-hover-color);
+}

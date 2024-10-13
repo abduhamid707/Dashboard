@@ -1,0 +1,9 @@
+.content_wrapper {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+}
+.content_wrapper::-webkit-scrollbar {
+  display: none; /* Scroll chizig'ini yashirish */
+}
