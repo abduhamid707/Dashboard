@@ -26,11 +26,12 @@ function App() {
 
       <div className={`content ${isSidebarOpen ? '' : 'collapsed'}`}>
         {
-            <button onClick={toggleSidebar} className="toggle-btn">
-              {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
-            </button>
+          token ? ( <button onClick={toggleSidebar} className="toggle-btn">
+            {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
+          </button>): (<></>)
+           
         }
-        <div className="content_wrapper">
+        <div className="content_wrapper"> 
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route
